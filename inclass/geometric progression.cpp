@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std; 
+#define int long long
 
 vector<int>A;
 int geometric(int a, int d, int n){
@@ -14,7 +15,7 @@ int geometric(int a, int d, int n){
     return 0;
 }
 
-int main() {
+signed main() {
     int p, q, r;
     cin>>p;
     cin>>q;
