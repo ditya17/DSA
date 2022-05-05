@@ -2,34 +2,25 @@
 using namespace std;
 
 int max_of_four(int a, int b, int c, int d){
-    int e,f,max;
-    if (a>b){
-        e = a;
+    int max = 0;
+    if(max<a){
+        max = a;
     }
-    else {
-        e =b;       
+    if(max<b){
+        max = b;
     }
-    if (c>d){
-        f = c;
+    if(max<c){
+        max = c;
     }
-    else {
-        f =d;
-    }
-    if (e>f){
-        max =e;
-    }
-    else {
-        max = f;
+    if(max<d){
+        max = d;
     }
     return max;
-} 
+}
 
 int main(){
 int z,p,q,r,s;
-cin>>p;
-cin>>q;
-cin>>r;
-cin>>s;
+cin>>p>>q>>r>>s;
 z = max_of_four(p, q, r, s);
 cout<<z;
 }
