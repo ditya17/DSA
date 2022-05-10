@@ -2,19 +2,25 @@
 using namespace std;
 
 void update(int *a,int *b) {
-    int pa =  *a + *b;
-    int pb = *a - *b;
-    cout<<pa<<endl;
-    cout<<abs(pb);
-    
+    int x,y;
+    x=*a+(*b);
+    if(*a>*b){
+        y=*a-(*b);
+    }
+    else{
+        y=*b-(*a);
+    }
+    cout<<x<<"\n";
+    cout<<y;  
 }
 
 int main() {
     int a, b;
     int *pa = &a, *pb = &b;
     
-    scanf("%d %d", &a, &b);
+    cin>>a>>b;
     update(pa, pb);
+    
 
     return 0;
 }
