@@ -1,4 +1,4 @@
- vector<int>getPrimeFactors(int a){
+ vector<int>getFactors(int a){
         vector<int>Factors;
          for(int i=2;i<=a;i++){
           while(a%i==0){
@@ -11,7 +11,7 @@
 class Solution {
 public:
     int minSteps(int n) {
-        vector<int>P = getPrimeFactors(n);
+        vector<int>P = getFactors(n);
         int sum =0;
        for(int i=0;i<P.size();i++){
        sum = sum+ P[i];  
