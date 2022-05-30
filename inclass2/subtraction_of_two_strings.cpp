@@ -19,8 +19,8 @@ bool compare(string a,string b){
 string subtract(string a,string b){
     string d = "0123456789";
     string c ="";
-    compare (a,b);
-    if(compare(a,b) == 1) {
+    bool abc = compare (a,b);
+    if(!abc) swap(a,b);
         int i = a.size()-1;
         int j = b.size()-1;
         while (i>=0 && j>=0){
@@ -39,27 +39,7 @@ string subtract(string a,string b){
             c = c+a[i];
             i--;
          }
-    }
-    else  {
-        int i = a.size()-1;
-        int j = b.size()-1;
-        while (j>=0 && i>=0){
-            if ((b[j]-'0')>=(a[i]-'0')){
-               int z = (b[j]-'0')-(a[i]-'0');
-                c = c+ d[z];
-            }
-            else{
-                int z = ((b[j]-'0')+10)-(a[i]-'0');
-                b[j-1] = ((b[j-1]-'0')-1)+'0';
-                c = c+ d[z]; 
-            }
-          i--,j--;
-        }
-        while (j>=0){
-            c = c+b[j];
-            j--;
-         }
-    }
+    if(!abc)  c=c+'-' ;
     reverse(c.begin(),c.end());
     cout<<c;
     return c;
