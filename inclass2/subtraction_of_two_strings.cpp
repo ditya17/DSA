@@ -30,7 +30,15 @@ string subtract(string a,string b){
             }
             else{
                 int z = ((a[i]-'0')+10)-(b[j]-'0');
-                a[i-1] = ((a[i-1]-'0')-1)+'0';
+                if (a[i-1] != '0')  a[i-1] = ((a[i-1]-'0')-1)+'0';
+                else {
+                    int k=i-1;
+                    while(k>=0 && a[k]=='0'){
+                    a[k]='9';
+                    k--;
+                 }
+                 a[k]= d[a[k]-'1'];
+                }
                 c = c+ d[z]; 
             }
           i--,j--;
