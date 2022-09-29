@@ -14,3 +14,21 @@ long Solution::solve(int A, int B) {
     product = product*A*B;
     return product;
 }
+
+//TLE again
+
+long hcf(int A, int B){
+    if (B>A) swap(A,B);
+    if (B == 1) return 1;
+    
+    int x = A%B;
+    if (x == 0) return B;
+    return hcf(B,x);
+}
+
+long Solution::solve(int A, int B) {
+    int z = hcf(A,B);
+    if (B>A) swap(A,B);
+ //   return(A*B)/z;
+    return (A/z)*B;
+}
