@@ -27,7 +27,7 @@ long hcf(int A, int B){
 }
 
 long Solution::solve(int A, int B) {
-    int z = hcf(A,B);
+    long z = hcf(A,B);
     if (B>A) swap(A,B);
  //   return(A*B)/z;
     return (A/z)*B;
