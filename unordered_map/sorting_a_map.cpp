@@ -1,5 +1,7 @@
-// making a comparator for comparing pair based on first value of pair
-int cmp(pair<int,int>a, pair<int,int>b){
+// making a comparator function for comparing pair based on first value of pair
+// comparator functions are made to sort data according to your customisation
+// comparator function should be static to avoid errors
+static int cmp(pair<int,int>a, pair<int,int>b){
     return a.first<b.first;
 }
 
