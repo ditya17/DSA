@@ -10,4 +10,14 @@ int main() {
     for (auto i = mp.begin();i!= mp.end();i++){
         cout<<i->first<<" "<<i->second<<endl;
     }
+
+
+    // how we iterate a map
+    unordered_set<int>ans;
+    ans.insert(1);
+    ans.insert(2);
+    
+    for (auto i = ans.begin();i!=ans.end();i++){
+        cout<<(*i)<<" ";
+    }
 }
