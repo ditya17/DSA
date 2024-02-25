@@ -12,7 +12,7 @@ int main() {
     }
 
 
-    // how we iterate a map
+    // how we iterate a set
     unordered_set<int>ans;
     ans.insert(1);
     ans.insert(2);
